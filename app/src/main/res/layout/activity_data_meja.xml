@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/data_meja_cons_layout"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+tools:context=".DataMeja">
+
+    <ImageButton
+        android:id="@+id/data_meja_ib_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_back"
+        android:backgroundTint="@color/button"
+        android:layout_marginTop="@dimen/empat_puluh"
+        android:layout_marginStart="@dimen/dua_empat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/data_meja_tv_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/admin"
+        android:textSize="@dimen/text_enam_belas"
+        android:layout_marginEnd="@dimen/dua_empat"
+        android:layout_marginTop="@dimen/empat_puluh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/data_meja_tv_meja"
+        style="@style/TextSubHead"
+        android:text="@string/no_meja"
+        android:layout_marginTop="@dimen/enam_belas"
+        android:layout_marginStart="@dimen/dua_empat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_meja_ib_back" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/data_meja_rv_meja"
+        style="@style/BaseUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/enam_belas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_meja_tv_meja" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/data_meja_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/enam_belas"
+        android:layout_marginBottom="@dimen/enam_belas"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
